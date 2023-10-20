@@ -406,7 +406,7 @@ h1 {
     color: #333;
 }
 
-table {
+.table-products {
     border-collapse: collapse;
     width: 80%;
     margin: 0 auto;
@@ -423,4 +423,68 @@ th, td {
 thead {
     background-color: #333;
     color: #fff;
+}
+
+/* Package Delivery Form */
+.package-table {
+    margin-top: 10px;
+    margin-left: 0;
+    border: none;
+}
+
+
+
+.package-cell {
+    padding: 10px;
+    border: none;
+}
+
+/* Establecer un ancho de 30px para los campos de tipo "text" */
+input[type="text"] {
+    width: 30rem;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Estilos para el botón "Save Data" */
+.save-button {
+    margin-top: 10px;
+    margin-left: 20rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el cuadro de texto */
+textarea {
+    margin-top: 10px;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px #000;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
 }
