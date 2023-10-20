@@ -425,6 +425,14 @@ thead {
     color: #fff;
 }
 
+.return-btn{
+    background-color: #46A2FD;
+    padding: 15px;
+    border-radius: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Package Delivery Form */
 .package-table {
     margin-top: 10px;
@@ -439,7 +447,7 @@ thead {
     border: none;
 }
 
-/* Establecer un ancho de 30px para los campos de tipo "text" */
+
 input[type="text"] {
     width: 30rem;
     border-radius: 5px;
@@ -451,6 +459,12 @@ input[type="text"] {
     margin-top: 10px;
     margin-left: 20rem;
     margin-bottom: 10px;
+    background-color: #46A2FD;
+    padding: 15px;
+    border-radius: 15px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
 }
 
 /* Estilos para el cuadro de texto */
@@ -488,3 +502,37 @@ textarea {
     padding: 10px;
     cursor: pointer;
 }
+
+
+
+h2 {
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+}
+
+select {
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 5px solid #333;
+    border-radius: 4px;
+    font-weight: 500;
+    
+    
+}
+
+.types-table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+}
+

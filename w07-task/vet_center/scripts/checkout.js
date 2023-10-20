@@ -1,3 +1,8 @@
+/***********************************
+ *
+ * 
+ **********************************/
+
 document.addEventListener('DOMContentLoaded', function () {
     // Obtiene la referencia a la tabla en checkout.html
     const tableBody = document.getElementById('checkoutTableBody');
@@ -33,6 +38,73 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+
+/***********************************
+ *
+ * 
+ **********************************/
+
+//Select shipping types
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtiene la referencia a la tabla en checkout.html
+    const tableBody = document.getElementById('checkoutTableBody');
+    const select = document.getElementById('sortBy');
+    const shippingTableBody = document.getElementById('shippingTableBody');
+    let cartData;
+
+    // Recupera los datos del carrito desde el almacenamiento local
+    cartData = JSON.parse(localStorage.getItem('cartData'));
+
+    // ... (código para llenar la tabla de carrito, como se proporciona en tu pregunta original)
+
+    select.addEventListener('change', () => {
+        const selectedOption = select.value;
+        if (selectedOption !== "") {
+            fetch('shipping_options.json')
+                .then(response => response.json())
+                .then(data => {
+                    const selectedShipping = data.options.find(option => option.id == parseInt(selectedOption));
+                    if (selectedShipping) {
+                        const row = document.createElement('tr');
+                        const shippingTypeCell = document.createElement('td');
+                        shippingTypeCell.textContent = selectedShipping.name;
+                        const costCell = document.createElement('td');
+                        costCell.textContent = `$${selectedShipping.price}`;
+
+                        // Calcula el total de productos sumando el total de productos y el precio del envío
+                        const totalProductPrice = cartData.reduce((total, product) => {
+                            return total + (product.price * product.quantity);
+                        }, 0);
+
+                        const shippingPrice = selectedShipping.price;
+                        const totalPrice = totalProductPrice + shippingPrice;
+
+                        // Crear una nueva celda para el total general
+                        const totalGeneralCell = document.createElement('td');
+                        totalGeneralCell.textContent = `$${totalPrice.toFixed(2)}`;
+
+                        row.appendChild(shippingTypeCell);
+                        row.appendChild(costCell);
+                        row.appendChild(totalGeneralCell);
+
+                        shippingTableBody.innerHTML = '';
+                        shippingTableBody.appendChild(row);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+    });
+});
+
+/***********************************
+ *
+ * 
+ **********************************/
+
+//SHIPPING INFORMATION
 
 function saveData() {
     const name = document.getElementById("name").value;

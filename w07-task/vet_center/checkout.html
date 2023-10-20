@@ -36,8 +36,11 @@
                     <p class="login">Login</p>
                 </div>
             </div>
+        </header>
 
-            <section class="check-table-bk">
+
+                <!---Table-Products-->   
+
                 <h1>Checkout</h1>
                 <table class="table-products">
                     <thead>
@@ -49,81 +52,92 @@
                         </tr>
                     </thead>
                     <tbody id="checkoutTableBody">
-                        <!-- Los datos del carrito se agregarán aquí dinámicamente con JavaScript -->
+                        <!-- Los datos del carrito se agregarán aquí dinámicamente-->
                     </tbody>
                 </table>
-                <a href="store.html">Return to the store</a>
+                <a class='return-btn' href="store.html">Return to the store</a>
 
         
+                <!--shipping types-->
 
-        <h2>Select shipping types</h2>
+                <h2>Select shipping types</h2>
+                <select id="sortBy" title="Choose a data filter.">
+                    <option value="" disabled selected>Filter shipping types</option>
+                    <option value="1">Home delivery</option>
+                    <option value="2">Shipping to a delivery point</option>
+                    <option value="3">Expedited shipping</option>
+                    <option value="4">Standard shipping</option>
+                    <option value="5">Cash on delivery</option>
+                    <option value="6">International shipping or to the islands</option>
+                    <option value="7">Fragile or heavy shipments</option>
 
-        <select id="sortBy" title="Choose a data filter.">
-          <option value="" disabled selected>Filter shipping types</option>
-          <option value="1">Home delivery</option>
-          <option value="2">Shipping to a delivery point</option>
-          <option value="3">Expedited shipping</option>
-          <option value="4">Standard shipping</option>
-          <option value="5">International shipping or to the islands</option>
-          <option value="6">Fragile or heavy shipments</option>
-        </select>
-    
-        <div id="shipping">
-        </div>
+                </select>
 
-        <h2>SHIPPING INFORMATION</h2>
-        <h3>Package Delivery Form - Complete all the information for the shipment</h3>
-        <table class="package-table">
-            <tr class="package-row">
-                <td class="package-cell">Name:</td>
-                <td class="package-cell"><input type="text" id="name"></td>
-            </tr>
-            <tr class="package-row">
-                <td class="package-cell">Last Name:</td>
-                <td class="package-cell"><input type="text" id="lastName"></td>
-            </tr>
-            <tr class="package-row">
-                <td class="package-cell">Address:</td>
-                <td class="package-cell"><input type="text" id="address"></td>
-            </tr>
-            <tr class="package-row">
-                <td class="package-cell">Country:</td>
-                <td class="package-cell"><input type="text" id="country"></td>
-            </tr>
-            <tr class="package-row">
-                <td class="package-cell">State/Province:</td>
-                <td class="package-cell"><input type="text" id="state"></td>
-            </tr>
-            <tr class="package-row">
-                <td class="package-cell">City:</td>
-                <td class="package-cell"><input type="text" id="city"></td>
-            </tr>
-            <tr class="package-row">
-                <td class="package-cell">Phone:</td>
-                <td class="package-cell"><input type="text" id="phone"></td>
-            </tr>
-        </table>
-        <button onclick="saveData()" class="save-button">Save Data</button>
+                <table class="types-table">
+                    <thead>
+                        <tr>
+                            <th>Shipping Type</th>
+                            <th>Cost</th>
+                            <th>Total purchase</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shippingTableBody">
+                    </tbody>
+                </table>
 
-        <!-- Modal -->
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div id="savedInfo"></div>
-                <button onclick="saveToTextArea()" class="save-button">Save</button>
-            </div>
-        </div>
-        <textarea id="textArea" rows="10" cols="50" style="display: none;"></textarea>
+                <h2>SHIPPING INFORMATION</h2>
+                <h3>Package Delivery Form - Complete all the information for the shipment</h3>
+                <table class="package-table">
+                    <tr class="package-row">
+                        <td class="package-cell">Name:</td>
+                        <td class="package-cell"><input type="text" id="name"></td>
+                    </tr>
+                    <tr class="package-row">
+                        <td class="package-cell">Last Name:</td>
+                        <td class="package-cell"><input type="text" id="lastName"></td>
+                    </tr>
+                    <tr class="package-row">
+                        <td class="package-cell">Address:</td>
+                        <td class="package-cell"><input type="text" id="address"></td>
+                    </tr>
+                    <tr class="package-row">
+                        <td class="package-cell">Country:</td>
+                        <td class="package-cell"><input type="text" id="country"></td>
+                    </tr>
+                    <tr class="package-row">
+                        <td class="package-cell">State/Province:</td>
+                        <td class="package-cell"><input type="text" id="state"></td>
+                    </tr>
+                    <tr class="package-row">
+                        <td class="package-cell">City:</td>
+                        <td class="package-cell"><input type="text" id="city"></td>
+                    </tr>
+                    <tr class="package-row">
+                        <td class="package-cell">Phone:</td>
+                        <td class="package-cell"><input type="text" id="phone"></td>
+                    </tr>
+                </table>
+                <button onclick="saveData()" class="save-button">Save Data</button>
+
+                <!-- Modal -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <div id="savedInfo"></div>
+                        <button onclick="saveToTextArea()" class="save-button">Save</button>
+                    </div>
+                </div>
+                <textarea id="textArea" rows="10" cols="50" style="display: none;"></textarea>
 
 
-        <input type="checkbox" id="cbox1" value="second_checkbox" />
-        <label for="cbox2">I agree with the purchase</label>
+                <input type="checkbox" id="cbox1" value="second_checkbox" />
+                <label for="cbox2">I agree with the purchase</label>
 
-        <input type="checkbox" id="cbox2" value="first_checkbox" />
-        <label for="cbox2">I agree with the terms and conditions</label>
+                <input type="checkbox" id="cbox2" value="first_checkbox" />
+                <label for="cbox2">I agree with the terms and conditions</label>
 
         <!--Falta formulario y pagos-->
-    </section>
+            
             <footer>
                 <p>Vet Center &copy; 2023 - Fernando Cardozo - CSE121b Final Projet</p>
                 <p>All Vet Center Pages</p>
