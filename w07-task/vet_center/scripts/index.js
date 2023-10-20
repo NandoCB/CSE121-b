@@ -69,9 +69,9 @@ const showHTML = () => {
     let total = 0; //total del dinero a pagar
     let totalOfProducts = 0;  //total de items del carrito
 
-    // Limpiamos el contenido actual de la lista de productos en el carrito
+    // Limpia el contenido actual de la lista de productos en el carrito
     const rowCart = document.querySelector('.row-cart');
-    rowCart.innerHTML = ''; // Limpiamos la lista de productos en el carrito
+    rowCart.innerHTML = ''; // Limpia la lista de productos en el carrito
 
     allProducts.forEach(product => {
         const cartProduct = document.createElement('div');
@@ -107,3 +107,15 @@ const showHTML = () => {
     }
    
 };
+
+const cartData = {
+    products: allProducts,
+    total: valorTotal.innerText,
+    count: countProducts.innerText
+  };
+  
+  // Convierte el objeto JSON a una cadena
+  const cartDataString = JSON.stringify(cartData);
+  
+  // Almacena la cadena en el almacenamiento local
+  localStorage.setItem('cartData', cartDataString);

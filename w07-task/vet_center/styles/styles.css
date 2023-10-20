@@ -309,6 +309,7 @@ footer{
     color: white;
     text-decoration: none;
     
+    
 }
 
 footer p{
@@ -392,4 +393,42 @@ color: white
 .cart-empty{
     padding: 20px;
     text-align: center;
+}
+
+/***********************************************/
+/*Checkout -page */
+
+.check-table-bk{
+    background-color: white;
+    
+}
+.check-title {
+    font-size: 24px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    
+    
+}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+th, td {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+tfoot {
+    background-color: #333;
+    color: white;
+}
+
+td#checkout-total {
+    font-weight: bold;
 }
