@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Store</title>
+    <title>Checkout</title>
     <link rel="icon" href="image/patitas1.ico">
 </head>
  <body>
@@ -38,29 +38,47 @@
             </div>
 
             <section class="check-table-bk">
-                <h1 class="check-title">Checkout</h1>
+                <h1>Checkout</h1>
                 <table>
                     <thead>
                         <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
-                    <tbody id="checkout-table">
-
+                    <tbody id="checkoutTableBody">
+                        <!-- Los datos del carrito se agregarán aquí dinámicamente con JavaScript -->
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>Total:</td>
-                            <td id="checkout-total"></td>
-                        </tr>
-                    </tfoot>
                 </table>
-        </section>
+                <a href="store.html">Volver a la tienda</a>
+
+        
+
+        <h2>Select shipping types</h2>
+
+        <select id="sortBy" title="Choose a data filter.">
+          <option value="" disabled selected>Filter shipping types</option>
+          <option value="1">Home delivery</option>
+          <option value="2">Shipping to a delivery point</option>
+          <option value="3">Expedited shipping</option>
+          <option value="4">Standard shipping</option>
+          <option value="5">International shipping or to the islands</option>
+          <option value="6">Fragile or heavy shipments</option>
+        </select>
+    
+        <div id="shipping">
+        </div>
+
+        <input type="checkbox" id="cbox1" value="second_checkbox" />
+        <label for="cbox2">I agree with the purchase</label>
+
+        <input type="checkbox" id="cbox2" value="first_checkbox" />
+        <label for="cbox2">I agree with the terms and conditions</label>
 
         <!--Falta formulario y pagos-->
-
+    </section>
             <footer>
                 <p>Vet Center &copy; 2023 - Fernando Cardozo - CSE121b Final Projet</p>
                 <p>All Vet Center Pages</p>

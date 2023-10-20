@@ -9,3 +9,7 @@ The project code is a JavaScript implementation to manage a shopping cart on a w
 5. Add an event handler to remove products from the cart.
 6. Defines a showHTML function that updates the cart interface on the web page, displaying the products, total quantity, and total price.
 7. Updates the cart display based on products added or removed.
+
+
+
+https://drive.google.com/file/d/1LG6wQ2o8JNyeexoUTl1MtE9gpMXluIMC/view?usp=sharing

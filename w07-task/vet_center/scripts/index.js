@@ -31,6 +31,8 @@ productsList.addEventListener('click', e => {
             allProducts.push(infoProduct);
         }
 
+        localStorage.setItem('cartData', JSON.stringify(allProducts));
+
         showHTML();
     }
 });

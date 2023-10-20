@@ -1,0 +1,39 @@
+{
+  "options": [
+    {
+      "id": 1,
+      "name": "Home delivery",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "name": "Shipping to a delivery point",
+      "price": 10
+    },
+    {
+      "id": 3,
+      "name": "Expedited shipping",
+      "price": 25
+    },
+    {
+      "id": 4,
+      "name": "Standard shipping",
+      "price": 0
+    },
+    {
+      "id": 5,
+      "name": "Cash on delivery",
+      "price": 10
+    },
+    {
+      "id": 6,
+      "name": "International shipping or to the islands",
+      "price": 20
+    },
+    {
+      "id": 7,
+      "name": "Fragile or heavy shipments",
+      "price": 15
+    }
+  ]
+}

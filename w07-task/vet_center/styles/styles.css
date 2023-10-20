@@ -400,35 +400,27 @@ color: white
 
 .check-table-bk{
     background-color: white;
-    
 }
-.check-title {
-    font-size: 24px;
-    text-align: center;
+    
+h1 {
+    color: #333;
 }
 
 table {
     border-collapse: collapse;
-    margin: auto;
-    
-    
-}
-
-thead {
-    background-color: #333;
-    color: white;
-}
-
-th, td {
-    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
     border: 1px solid #ccc;
 }
-
-tfoot {
-    background-color: #333;
-    color: white;
+    
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
 }
-
-td#checkout-total {
-    font-weight: bold;
+    
+thead {
+    background-color: #333;
+    color: #fff;
 }
