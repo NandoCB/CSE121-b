@@ -4,9 +4,10 @@ const cartInfo = document.querySelector('.cart-product'); // Changed 'cart-produ
 const rowProduct = document.querySelector('.row-product');
 const productsList = document.querySelector('.container-item');
 let allProducts = [];
-const totalValue = document.querySelector('.total-pagar');
-const countProducts = document.querySelector('#sum-products');
+const valorTotal = document.querySelector('.total-pagar')
+const countProducts = document.querySelector('#sum-products')
 
+// Actualiza el evento click en el botón del carrito
 btnCart.addEventListener('click', () => {
     containerCartProducts.classList.toggle('hidden-cart');
 });
@@ -58,6 +59,16 @@ document.addEventListener('click', (event) => {
 });
 
 const showHTML = () => {
+
+    if(!allProducts.length){
+        containerCartProducts.innerHTML=`
+        <p class='cart-empty'>The cart is empty</p>`;
+
+        totalOfProducts = 0; // Reset totalOfProducts to 0
+    };
+    let total = 0; //total del dinero a pagar
+    let totalOfProducts = 0;  //total de items del carrito
+
     // Limpiamos el contenido actual de la lista de productos en el carrito
     const rowCart = document.querySelector('.row-cart');
     rowCart.innerHTML = ''; // Limpiamos la lista de productos en el carrito
@@ -65,6 +76,9 @@ const showHTML = () => {
     allProducts.forEach(product => {
         const cartProduct = document.createElement('div');
         cartProduct.classList.add('cart-product');
+
+        total += product.price * product.quantity;
+        totalOfProducts += product.quantity;
 
         cartProduct.innerHTML = `
             <div class="info-cart-product">
@@ -76,10 +90,13 @@ const showHTML = () => {
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
         `;
-        rowCart.appendChild(cartProduct); // Agregamos el nuevo producto a la lista en el carrito
+        rowCart.appendChild(cartProduct); // Agrega el nuevo producto a la lista en el carrito
 
 
     });
+
+    valorTotal.innerText = `$${total.toFixed(2)}`;
+    countProducts.innerText = totalOfProducts;
 
     if (allProducts.length > 0) {
         cartTotal.classList.remove('hidden');
@@ -88,7 +105,5 @@ const showHTML = () => {
         cartTotal.classList.add('hidden');
         cartEmpty.classList.remove('hidden');
     }
-
-    totalValue.innerText = `$${total.toFixed(2)}`;
-    countProducts.innerText = totalOfProducts; // Actualizamos la cantidad total de productos en el carrito
-}
+   
+};
