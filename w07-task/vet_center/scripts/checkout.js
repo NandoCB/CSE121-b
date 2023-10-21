@@ -158,3 +158,18 @@ function saveToTextArea() {
     closeModal();
 }
 
+
+function openPopup() {
+    let popup = document.getElementById('popup');
+    let overlay = document.getElementById('overlay');
+    popup.style.visibility = 'visible';
+    overlay.style.display = 'block';
+}
+
+function closePopup() {
+    let popup = document.getElementById('popup');
+    let overlay = document.getElementById('overlay');
+    popup.style.visibility = 'hidden';
+    overlay.style.display = 'none';
+}
+
