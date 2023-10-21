@@ -1,3 +1,15 @@
+/*************** 
+principal functions:
+1. Function in the event btnCart.addEventListener('click', function () {...}):
+It runs when the cart button is clicked. controls the appearance and disappearance of the cart on the page.
+2. Function in the event productsList.addEventListener('click', function (e) {...}):
+It runs when the button to add a product to cart is clicked, also updating the local storage with the cart data.
+3. Function in the event document.addEventListener('click', function (event) {...}):
+Used to remove products from the cart when the close icon is clicked
+4.showHTML function:
+Updates the display of the products in the cart. Clears the current contents of the cart, loops through all products in allProducts,
+calculates the total and quantity of products, and then displays the products in the cart.
+*/
 const btnCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector('.container-cart-products');
 const cartInfo = document.querySelector('.cart-product'); // Changed 'cart-product' to '.cart-product'

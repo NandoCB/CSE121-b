@@ -1,5 +1,16 @@
 /***********************************
- *
+ *List of existing functions:
+List of existing functions:
+1. DOMContentLoaded Event Listeners:
+a.The event that is fired when the DOM has been fully loaded.
+  'DOMContentLoaded', function ():
+b.It is executed when the page is ready to interact with the JavaScript. In this case, it is used to load and display the products in the cart and select shipping options.
+2. saveData(): Save the shipping information. It collects the data from the submission form, displays it on the page and saves it in a modal.
+3. openModal(): Open the modal that displays the saved shipping information.
+4. closeModal(): Closes the modal that displays the saved shipping information.
+5. saveToTextArea(): Copies the shipping information saved in the modal and places it in a text box.
+6. openPopup(): Open a popup on the web page.
+7. closePopup(): Close the popup.
  * 
  **********************************/
 
@@ -38,11 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
-/***********************************
- *
- * 
- **********************************/
 
 //Select shipping types
 
@@ -99,10 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/***********************************
- *
- * 
- **********************************/
 
 //SHIPPING INFORMATION
 
