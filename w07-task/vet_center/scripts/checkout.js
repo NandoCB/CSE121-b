@@ -1,5 +1,4 @@
 /***********************************
- *List of existing functions:
 List of existing functions:
 1. DOMContentLoaded Event Listeners:
 a.The event that is fired when the DOM has been fully loaded.
@@ -11,7 +10,6 @@ b.It is executed when the page is ready to interact with the JavaScript. In this
 5. saveToTextArea(): Copies the shipping information saved in the modal and places it in a text box.
 6. openPopup(): Open a popup on the web page.
 7. closePopup(): Close the popup.
- * 
  **********************************/
 
 document.addEventListener('DOMContentLoaded', function () {
